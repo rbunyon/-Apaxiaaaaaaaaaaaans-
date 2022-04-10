@@ -1,0 +1,28 @@
+using System;
+
+namespace Group_Assignment_3
+{
+    public class Program
+    {
+        public static void Main(string[] args)
+        {
+            string originalName = Console.ReadLine();
+
+            string editedname = originalName[0].ToString();
+
+            char currentletter = originalName[0];
+
+            for (int i = 0; i < originalName.Length; i++)
+            {
+                char letter = originalName[i];
+                if (letter != currentletter)
+                {
+                    editedname += letter;
+                }
+                currentletter = letter;
+            }
+
+            Console.WriteLine(editedname);
+        }
+    }
+}
